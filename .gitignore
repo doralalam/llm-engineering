@@ -1,0 +1,11 @@
+# Virtual env
+.venv
+
+# Env files
+.env
+
+# macOS
+.DS_Store
+
+# folder to store bytecode file
+__pycache__
