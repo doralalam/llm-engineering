@@ -9,3 +9,6 @@
 
 # folder to store bytecode file
 __pycache__
+
+# gradio certificates
+.gradio
