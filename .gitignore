@@ -12,3 +12,6 @@ __pycache__
 
 # gradio certificates
 .gradio
+
+# db file for 017
+002_week/day_4/prices.db
