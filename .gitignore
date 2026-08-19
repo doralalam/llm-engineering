@@ -15,3 +15,6 @@ __pycache__
 
 # db file for 017
 002_week/day_4/prices.db
+
+# cpp file for 034
+004_week/day_3/main
