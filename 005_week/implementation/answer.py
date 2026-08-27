@@ -11,11 +11,11 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-gemini_base_url = os.getenv('GEMINI_BASE_URL')
-gemini_api_key = os.getenv('GEMINI_API_KEY')
+ollama_base_url = os.getenv('OLLAMA_BASE_URL')          # since we are using OpenAI endpoint via langchain object
+ollama_api_key = os.getenv('OLLAMA_API_KEY')
 
 
-MODEL = "gemini-3.6-flash"
+MODEL = "llama3.2"
 DB_NAME = str(Path(__file__).parent.parent / "vector_db")
 
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
@@ -33,7 +33,7 @@ Context:
 
 vectorstore = Chroma(persist_directory=DB_NAME, embedding_function=embeddings)
 retriever = vectorstore.as_retriever()
-llm = ChatOpenAI(temperature=0, model_name=MODEL, base_url=gemini_base_url, api_key=gemini_api_key) # langchain object
+llm = ChatOpenAI(temperature=0, model_name=MODEL, base_url=ollama_base_url, api_key=ollama_api_key)     # langchain object
 
 
 def fetch_context(question: str) -> list[Document]:
