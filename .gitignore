@@ -23,3 +23,6 @@ __pycache__
 
 # vector_db from 041
 vector_db
+
+# preprocessed_db from 048
+preprocessed_db
