@@ -26,3 +26,6 @@ vector_db
 
 # preprocessed_db from 048 of 005_week
 preprocessed_db
+
+# jsonl files for batch processing
+006_week/jsonl
